@@ -12,7 +12,7 @@ source:
   sha256: 7491de5e45870a06d1ec85a3b27fd8edc143f5e9c8b13fa48fefb5fa6ffc5084
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -32,7 +32,7 @@ tests:
       imports:
         - llama_index.postprocessor.cohere_rerank
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
         - "*"
 
