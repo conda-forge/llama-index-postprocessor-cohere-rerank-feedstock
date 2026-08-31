@@ -26,6 +26,9 @@ requirements:
     - cohere >=5.15,<7
     - llama-index-core >=0.13.0,<0.15
     - tenacity >=8.2.0,<10
+    # avoid https://github.com/conda-forge/cohere-feedstock/issues/15
+    - pydantic-core >=2.18.2,<2.44.0
+
 tests:
   - python:
       imports:
