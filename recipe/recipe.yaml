@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.9.0
+  version: 0.10.0
 
 package:
   name: llama-index-postprocessor-cohere-rerank
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/llama-index-postprocessor-cohere-rerank/llama_index_postprocessor_cohere_rerank-${{ version }}.tar.gz
-  sha256: c617a0568b3333ebee4088d7802eb6157ed449d6849c45152930651401dbbef0
+  sha256: 81b99d94c7c280e3ca4db20e28fb7c6c5364220086dff3a9fcc5eb92066ba905
 
 build:
   number: 0
@@ -26,9 +26,6 @@ requirements:
     - cohere >=5.15,<7
     - llama-index-core >=0.13.0,<0.15
     - tenacity >=8.2.0,<10
-    # avoid https://github.com/conda-forge/cohere-feedstock/issues/15
-    - pydantic-core >=2.18.2,<2.44.0
-
 tests:
   - python:
       imports:
