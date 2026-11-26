@@ -12,7 +12,7 @@ source:
   sha256: 1713a8c893c9fdbf1cd621dbd87f27bab56d6ff91b397a406a1dd9d994f883c6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,9 +26,6 @@ requirements:
     - cohere >=5.15,<7
     - llama-index-core >=0.13.0,<0.15
     - tenacity >=8.2.0,<10
-    # avoid https://github.com/conda-forge/cohere-feedstock/issues/15
-    # can be removed if cohere>=7 is used
-    - pydantic-core >=2.18.2,<2.44.0
 
 tests:
   - python:
